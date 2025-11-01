@@ -1,0 +1,236 @@
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 50px 30px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 60px;
+            color: white;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+            animation: float 3s ease-in-out infinite;
+            border: 5px solid white;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 17px;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .bio {
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .nfc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 15px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .social-link:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .social-link:active {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .social-icon {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link:hover .social-icon {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            transform: rotate(5deg);
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .social-link:hover .social-icon::before {
+            left: 100%;
+        }
+
+        .social-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2d3748;
+            text-align: center;
+        }
+
+        .instagram { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+        .facebook { background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%); }
+        .twitter { background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%); }
+        .linkedin { background: linear-gradient(135deg, #0077b5 0%, #005885 100%); }
+        .youtube { background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%); }
+        .github { background: linear-gradient(135deg, #333 0%, #24292e 100%); }
+        .whatsapp { background: linear-gradient(135deg, #25d366 0%, #1ebd56 100%); }
+        .email { background: linear-gradient(135deg, #ea4335 0%, #c1351d 100%); }
+        .website { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+
+        .footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #a0aec0;
+            font-size: 14px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .footer-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+            animation: tap 1.5s ease-in-out infinite;
+        }
+
+        @keyframes tap {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+
+            .social-grid {
+                gap: 20px;
+            }
+
+            .social-icon {
+                width: 75px;
+                height: 75px;
+                font-size: 32px;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+   
